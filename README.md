@@ -71,7 +71,7 @@ Relasi:
 - **pemain (1) → statistik (1)**  
 - Jika pemain dihapus, datanya di tabel `statistik` ikut terhapus (`ON DELETE CASCADE`).
 
-![alt text]()
+![alt text](https://github.com/MamangPermen/TP7DPBO2425C1/blob/main/Documentation/Capture.JPG)
 
 ---
 
@@ -107,10 +107,13 @@ File `config/db.php` membuat class `Database` menggunakan **PDO**:
 1. Inisialisasi class (`Pemain`, `Jadwal`, `Statistik`).
 2. Menentukan halaman aktif berdasarkan `$_GET['page']`.
 3. Menampilkan halaman default “Pemain” jika tidak ada parameter.
-4. `include` header, footer, dan view sesuai tab yang dipilih.
-5. Setiap form di view akan memanggil fungsi class yang sesuai untuk CRUD.
+4. Setiap form di view akan memanggil fungsi class yang sesuai untuk CRUD.
 
 ---
 
 ## 📸 Dokumentasi
+
+
+https://github.com/user-attachments/assets/420ee3e7-899c-4e57-ad41-a94f1d6f4a5f
+
 
