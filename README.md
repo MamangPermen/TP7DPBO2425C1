@@ -71,7 +71,7 @@ Relasi:
 - **pemain (1) → statistik (1)**  
 - Jika pemain dihapus, datanya di tabel `statistik` ikut terhapus (`ON DELETE CASCADE`).
 
-![alt text]()
+![alt text](https://github.com/MamangPermen/TP7DPBO2425C1/blob/main/Documentation/Capture.JPG)
 
 ---
 
@@ -113,4 +113,8 @@ File `config/db.php` membuat class `Database` menggunakan **PDO**:
 ---
 
 ## 📸 Dokumentasi
+
+
+https://github.com/user-attachments/assets/420ee3e7-899c-4e57-ad41-a94f1d6f4a5f
+
 
