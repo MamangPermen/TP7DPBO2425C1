@@ -4,6 +4,7 @@ require_once "config/db.php";
 class Statistik {
     private $db;
 
+    // konstruktor
     public function __construct() {
         $this->db = (new Database())->conn;
     }
@@ -27,12 +28,12 @@ class Statistik {
         $check->execute([$id_pemain]);
         $existing = $check->fetchColumn();
 
-        if ($existing) {
+        if ($existing) { // Jika sudah ada, lakukan update
             $stmt = $this->db->prepare(
                 "UPDATE statistik SET penampilan=?, gol=?, assist=?, kartu_kuning=?, kartu_merah=? WHERE id_pemain=?"
             );
             return $stmt->execute([$penampilan, $gol, $assist, $kuning, $merah, $id_pemain]);
-        } else {
+        } else { // Jika belum ada, lakukan insert baru
             $stmt = $this->db->prepare(
                 "INSERT INTO statistik (id_pemain, penampilan, gol, assist, kartu_kuning, kartu_merah)
                  VALUES (?, ?, ?, ?, ?, ?)"
@@ -41,6 +42,7 @@ class Statistik {
         }
     }
 
+    // Menghapus data statistik berdasarkan ID
     public function deleteStat($id) {
         $stmt = $this->db->prepare("DELETE FROM statistik WHERE id_stat=?");
         return $stmt->execute([$id]);

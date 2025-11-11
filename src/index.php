@@ -24,12 +24,14 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'player';
     <main>
         <h2>Sistem Manajemen KING PERSIB</h2>
 
+        <!-- Navigasi antar halaman -->
         <nav>
             <a href="index.php?page=player">Pemain</a> |
             <a href="index.php?page=match">Jadwal</a> |
             <a href="index.php?page=stat">Statistik</a>
         </nav>
 
+        <!-- Menentukan halaman yang ditampilkan -->
         <section style="margin-top: 20px;">
             <?php
             switch ($page) {

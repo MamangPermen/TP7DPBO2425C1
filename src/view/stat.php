@@ -42,6 +42,8 @@ $listPemain = $pemain->getAllPemain();
 ?>
 
 <h3><?= $edit_data ? "Edit Statistik Pemain" : "Tambah Statistik Pemain" ?></h3>
+
+<!-- Form tambah/edit -->
 <form method="post">
     <select name="id_pemain" required <?= $edit_data ? 'disabled' : '' ?>>
         <option value="">Pilih Pemain</option>
@@ -74,6 +76,7 @@ $listPemain = $pemain->getAllPemain();
 <!-- Input cari pemain -->
 <input type="text" id="searchStat" placeholder="Cari pemain...">
 
+<!-- Tabel -->
 <table border="1" cellpadding="6">
   <tr>
     <th>No</th><th>Nama</th><th>Posisi</th><th>No Punggung</th>
@@ -98,6 +101,8 @@ $listPemain = $pemain->getAllPemain();
   <?php endforeach; ?>
 </table>
 
+
+<!-- Script cari pemain -->
 <script>
 document.getElementById('searchStat').addEventListener('keyup', function() {
     let filter = this.value.toLowerCase();

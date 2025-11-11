@@ -48,6 +48,8 @@ $data = $pemain->getAllPemain();
 ?>
 
 <h3><?= $edit_data ? "Edit Pemain" : "Tambah Pemain Baru" ?></h3>
+
+<!-- Form Tambah/edit -->
 <form method="post">
     <?php if ($edit_data): ?>
         <input type="hidden" name="id_pemain" value="<?= $edit_data['id_pemain'] ?>">
@@ -80,6 +82,7 @@ $data = $pemain->getAllPemain();
 <!-- Input cari pemain -->
 <input type="text" id="searchPlayer" placeholder="Cari pemain...">
 
+<!-- Tabel -->
 <table border="1" cellpadding="6">
   <tr>
     <th>No</th><th>Nama</th><th>Posisi</th><th>No Punggung</th><th>Usia</th><th>Asal</th><th>Aksi</th>
@@ -100,6 +103,7 @@ $data = $pemain->getAllPemain();
   <?php endforeach; ?>
 </table>
 
+<!-- Script buat cari pemain -->
 <script>
 document.getElementById('searchPlayer').addEventListener('keyup', function() {
     let filter = this.value.toLowerCase();

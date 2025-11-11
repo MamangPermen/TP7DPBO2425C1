@@ -35,6 +35,8 @@ $data = $jadwal->getAllJadwal();
 ?>
 
 <h3><?= $edit_data ? "Edit Jadwal" : "Tambah Jadwal Baru" ?></h3>
+
+<!-- Form Tambah/ edit -->
 <form method="post">
     <?php if ($edit_data): ?>
         <input type="hidden" name="id_jadwal" value="<?= $edit_data['id_jadwal'] ?>">
@@ -46,6 +48,7 @@ $data = $jadwal->getAllJadwal();
     <?php if ($edit_data): ?><a href="index.php?page=match">Batal</a><?php endif; ?>
 </form>
 
+<!-- Tabel -->
 <h3>Daftar Jadwal Pertandingan</h3>
 <table border="1" cellpadding="6">
   <tr>
