@@ -107,8 +107,7 @@ File `config/db.php` membuat class `Database` menggunakan **PDO**:
 1. Inisialisasi class (`Pemain`, `Jadwal`, `Statistik`).
 2. Menentukan halaman aktif berdasarkan `$_GET['page']`.
 3. Menampilkan halaman default “Pemain” jika tidak ada parameter.
-4. `include` header, footer, dan view sesuai tab yang dipilih.
-5. Setiap form di view akan memanggil fungsi class yang sesuai untuk CRUD.
+4. Setiap form di view akan memanggil fungsi class yang sesuai untuk CRUD.
 
 ---
 
